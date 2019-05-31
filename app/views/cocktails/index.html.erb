@@ -1,4 +1,4 @@
- <div class="cards">
+
 
 <h1> Cocktails List </h1>
 
@@ -6,10 +6,11 @@
   <h2>
     <%= link_to cocktail.name, cocktail_path(cocktail) %>
   </h2>
+  <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
   <% end %>
-</div>
 
 <h3>
   <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
 </h3>
+
 
