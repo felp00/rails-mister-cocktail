@@ -1,8 +1,13 @@
-<div class="col-sm-4 offset-4">
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
 
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name %>
   <%= f.button :submit, class: "btn btn-success" %>
 <% end %>
 
+
+    </div>
+  </div>
 </div>
