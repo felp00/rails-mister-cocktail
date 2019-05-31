@@ -9,9 +9,11 @@ class DosesController < ApplicationController
     @dose = Dose.new(dose_params)
     # we need `restaurant_id` to asssociate review with corresponding restaurant
     @dose.cocktail = set_doses
-    @dose.save
-
-    redirect_to cocktail_path(set_doses)
+    if @dose.save
+      redirect_to cocktail_path(set_doses)
+    else
+      render :new
+    end
   end
 
   def destroy
